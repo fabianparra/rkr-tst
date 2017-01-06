@@ -1,0 +1,202 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $light-gray;
+    margin: 0;
+    padding: 0;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+    &:hover {
+        text-decoration: none;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.rk-topbar {
+    background-color: $dark-gray;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    .rk-logo {
+        display: inline-block;
+        a {
+            display: block;
+            background-color: $black;
+            width: 264px;
+            height: 60px;
+            line-height: 72px;
+            text-align: center;
+        }
+    }
+    .admin-menu {
+        float: right;
+        margin-right: 50px;
+        display: inline-block;
+        a {
+            color: #ffffff;
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            padding-right: 30px;
+            background-image: url(images/gear/shape.png);
+            background-repeat: no-repeat;
+            background-position: right center;
+            font-size: 14px;
+        }
+    }
+}
+.rk-sidebar {
+    width: 264px;
+    background-color: $dark-gray;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    left: -265px;
+    transition: all .5s;
+    &.opened {
+        left: 0;
+    }
+    h4 {
+        color: #575a5f;
+        border-bottom: 1px solid;
+        margin: 30px 30px 10px 30px;
+        padding-bottom: 10px;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            a {
+                color: #ffffff;
+                display: block;
+                width: 100%;
+                height: 49px;
+                padding-left: 55px;
+                padding-right: 30px;
+                line-height: 49px;
+                background-repeat: no-repeat;
+                background-position: 22px center;
+                &.analytics {
+                    background-image: url(images/analitycs/analitycs.png);
+                }
+                &.news {
+                    background-image: url(images/newspaper/newspaper-o.png);
+                }
+                &.board {
+                    background-image: url(images/board-brief/board-brief.png);
+                }
+                &.briefcase {
+                    background-image: url(images/briefcase/briefcase.png);
+                }
+                &.close {
+                    background-image: url(images/angle-double/angle-double-left.png);
+                }
+                &.active {
+                    background-color: $black;
+                }
+                &:hover {
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}
+.rk-content {
+    transition: all .5s;
+    padding-top: 60px;
+    @include clearfix;
+    &.with-sidebar {
+        padding-left: 264px;
+    }
+}
+.rk-col-4 {
+    width: 31%;
+    float: left;
+}
+.rk-news-items {
+    padding: 26px 22px;
+    @include clearfix;
+}
+.rk-news-item {
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: solid 1px #e7e7ed;
+  margin: 0 12px 20px;
+  .item-head {
+      @include clearfix;
+      height: 45px;
+      line-height: 45px;
+  }
+  .item-cat {
+      color: $light-blue;
+      font-size: 12px;
+      display: inline-block;
+      float: left;
+      padding-left: 20px;
+  }
+  .item-date {
+      color: $light-txt;
+      font-size: 11px;
+      display: inline-block;
+      float:right;
+      padding-right: 20px;
+  }
+  .item-title {
+      color: $h-txt;
+      line-height: 20px;
+      font-size: 16px;
+      padding: 0 20px 10px;
+  }
+  .item-img {
+      margin-bottom: 10px;
+      img {
+          width: 100%;
+      }
+  }
+  .item-detail {
+      padding: 0 20px;
+      color: $main-txt;
+      font-size: 14px;
+  }
+  .item-actions {
+      padding: 0 20px;
+      border-top: 1px solid rgba(151, 151, 151, 0.1);
+      ul {
+          padding: 0;
+          li {
+              list-style-type: none;
+              display: inline-block;
+              a {
+                  display: inline-block;
+                  color: #c0c4c9;
+                  font-size: 13px;
+                  font-family: helvetica, sans-serif;
+                  i {
+                      font-size: 18px;
+                      color: #c0c8d1;
+                  }
+              }
+              &:nth-child(2) {
+                  margin: 0 32%;
+              }
+          }
+      }
+  }
+}

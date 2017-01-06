@@ -1,0 +1,17 @@
+{
+  "name": "rokk3r-fe-test",
+  "version": "1.0.0",
+  "description": "Rokk3r Front End Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabian Parra",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}

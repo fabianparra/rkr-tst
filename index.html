@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Rokk3r Front End Test</title>
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+        <script src="app/app.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="rk-topbar">
+                <div class="rk-logo">
+                    <a href="#/"><img src="css/images/r-3-l-logo-application-02.png" alt=""></a>
+                </div>
+                <div class="admin-menu">
+                    <a href="#">Admin Name</a>
+                </div>
+            </div>
+            <aside class="rk-sidebar opened">
+                <h4>NAVIGATE</h4>
+                <ul>
+                    <li><a class="analytics" href="#dashboard">Analytics</a></li>
+                    <li><a class="news active" href="#news">News</a></li>
+                    <li><a class="board" href="#">Board Brief</a></li>
+                    <li><a class="briefcase" href="#">Briefcase</a></li>
+                </ul>
+                <ul>
+                    <li><a class="close" href="#">Close Menu</a></li>
+                </ul>
+            </aside>
+            <div class="rk-content with-sidebar">
+
+                <div id="main">
+                    <div ng-view></div>
+                </div>
+
+            </div><!-- /rk-content -->
+        </div>
+        <!-- scripts -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "rokk3r-fe-test",
+  "description": "Rokk3r Front End Test",
+  "main": "index.js",
+  "authors": [
+    "Fabian Parra"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular": "^1.6.1",
+    "masonry": "^4.1.1",
+    "jquery": "^3.1.1"
+  }
+}
