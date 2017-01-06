@@ -6,9 +6,9 @@
           itemSelector: '.rk-col-4'
         });
 
-        $('.close').on('click', function() {
-            $('.rk-sidebar').removeClass('opened');
-            $('.rk-content').removeClass('with-sidebar');
-        });
+        // $('.close').on('click', function() {
+        //     $('.rk-sidebar').removeClass('opened');
+        //     $('.rk-content').removeClass('with-sidebar');
+        // });
     });
 }(jQuery));

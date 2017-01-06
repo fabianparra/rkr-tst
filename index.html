@@ -11,7 +11,7 @@
         <script src="app/app.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
     </head>
-    <body>
+    <body ng-controller="mainController">
         <div class="main">
             <div class="rk-topbar">
                 <div class="rk-logo">
@@ -21,7 +21,7 @@
                     <a href="#">Admin Name</a>
                 </div>
             </div>
-            <aside class="rk-sidebar opened">
+            <aside ng-class="{'rk-sidebar': default, 'opened': opened}">
                 <h4>NAVIGATE</h4>
                 <ul>
                     <li><a class="analytics" href="#dashboard">Analytics</a></li>
@@ -30,10 +30,10 @@
                     <li><a class="briefcase" href="#">Briefcase</a></li>
                 </ul>
                 <ul>
-                    <li><a class="close" href="#">Close Menu</a></li>
+                    <li><a ng-click="closeSidebar()" class="close" href="">Close Menu</a></li>
                 </ul>
             </aside>
-            <div class="rk-content with-sidebar">
+            <div ng-class="{'rk-content':default, 'with-sidebar': opened}">
 
                 <div id="main">
                     <div ng-view></div>

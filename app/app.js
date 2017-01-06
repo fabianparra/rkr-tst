@@ -29,14 +29,15 @@ app.config(function($routeProvider) {
 app.controller('mainController', function($scope) {
     // create a message to display in our view
     $scope.message = 'Everyone come and see how good I look!';
+    $scope.default = true;
+    $scope.opened = true;
+    $scope.closeSidebar = function() {
+        $scope.opened = false;
+    }
 });
 
 app.controller('newsController', function($scope) {
     $scope.message = 'Look! I am an news page.';
-});
-
-app.controller('contactController', function($scope) {
-    $scope.message = 'Contact us! JK. This is just a demo.';
 });
 
 app.controller('chartsController', function ($scope) {
